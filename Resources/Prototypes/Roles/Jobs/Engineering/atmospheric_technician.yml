@@ -2,10 +2,6 @@
   id: AtmosphericTechnician
   name: job-name-atmostech
   playTimeTracker: JobAtmosphericTechnician
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 36000
   startingGear: AtmosphericTechnicianGear
   icon: "AtmosphericTechnician"
   supervisors: job-supervisors-ce

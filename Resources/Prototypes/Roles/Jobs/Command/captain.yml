@@ -2,18 +2,6 @@
   id: Captain
   name: job-name-captain
   playTimeTracker: JobCaptain
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 54000
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 54000
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 54000
-    - !type:OverallPlaytimeRequirement
-      time: 324000
   weight: 20
   startingGear: CaptainGear
   icon: "Captain"

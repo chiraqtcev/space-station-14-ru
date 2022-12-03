@@ -4,13 +4,6 @@
   id: ChiefMedicalOfficer
   name: job-name-cmo
   playTimeTracker: JobChiefMedicalOfficer
-  requirements:
-    - !type:RoleTimeRequirement
-      role: JobChemist
-      time: 18000
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 54000
   weight: 10
   startingGear: CMOGear
   icon: "ChiefMedicalOfficer"

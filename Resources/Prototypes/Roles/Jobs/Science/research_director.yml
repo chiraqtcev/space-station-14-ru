@@ -2,10 +2,6 @@
   id: ResearchDirector
   name: job-name-rd
   playTimeTracker: JobResearchDirector
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Science
-      time: 54000
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "ResearchDirector"

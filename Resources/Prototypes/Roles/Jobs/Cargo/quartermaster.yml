@@ -2,13 +2,6 @@
   id: Quartermaster
   name: job-name-qm
   playTimeTracker: JobQuartermaster
-  requirements:
-    - !type:RoleTimeRequirement
-      role: JobSalvageSpecialist
-      time: 36000
-    - !type:DepartmentTimeRequirement
-      department: Cargo
-      time: 54000
   weight: 10
   startingGear: QuartermasterGear
   icon: "QuarterMaster"

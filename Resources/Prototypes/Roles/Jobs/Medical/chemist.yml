@@ -2,10 +2,6 @@
   id: Chemist
   name: job-name-chemist
   playTimeTracker: JobChemist
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 18000
   startingGear: ChemistGear
   icon: "Chemist"
   supervisors: job-supervisors-cmo
