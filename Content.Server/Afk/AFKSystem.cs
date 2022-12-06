@@ -85,6 +85,9 @@ public sealed class AFKSystem : EntitySystem
 
         foreach (var session in Filter.GetAllPlayers())
         {
+            if (session.Status != SessionStatus.InGame)
+                continue;
+
             var pSession = (IPlayerSession) session;
             var isAfk = _afkManager.IsAfk(pSession);
 
@@ -92,7 +95,7 @@ public sealed class AFKSystem : EntitySystem
             {
                 var ev = new AFKEvent(pSession);
                 RaiseLocalEvent(ref ev);
-                
+
                 _chatManager.DispatchServerMessage(pSession, Loc.GetString("afk-system-kick-warning"));
             }
 
