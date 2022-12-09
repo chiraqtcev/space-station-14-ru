@@ -14,7 +14,6 @@ public sealed partial class GhostGui : UIWidget
     public event Action? RequestWarpsPressed;
     public event Action? ReturnToBodyPressed;
     public event Action? GhostRolesPressed;
-
     public GhostGui()
     {
         RobustXamlLoader.Load(this);
