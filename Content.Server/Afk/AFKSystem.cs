@@ -91,13 +91,15 @@ public sealed class AFKSystem : EntitySystem
             var pSession = (IPlayerSession) session;
             var isAfk = _afkManager.IsAfk(pSession);
 
+
             if (isAfk && _afkPlayers.TryAdd(pSession, _timing.CurTime))
             {
                 var ev = new AFKEvent(pSession);
                 RaiseLocalEvent(ref ev);
 
-                _chatManager.DispatchServerMessage(pSession, Loc.GetString("afk-system-kick-warning"));
+             //   _chatManager.DispatchServerMessage(pSession, Loc.GetString("afk-system-kick-warning"));
             }
+
 
             if (!isAfk && _afkPlayers.Remove(pSession))
             {
@@ -107,7 +109,7 @@ public sealed class AFKSystem : EntitySystem
 
             if (isAfk &&
                 _afkPlayers.TryGetValue(pSession, out var startAfkTime) &&
-                _timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickDelay))
+                _timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickDelay) * 10)
             {
                 pSession.ConnectedClient.Disconnect( Loc.GetString("afk-system-kick-reason"));
             }
